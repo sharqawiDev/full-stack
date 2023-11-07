@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./App.css";
 import * as API from "./api";
+import { faker } from "@faker-js/faker";
 
 function App() {
   const [users, setUsers] = React.useState([]);
@@ -11,9 +12,13 @@ function App() {
   };
 
   const createUser = async () => {
-    await API.createUser("Salman", "anything");
+    await API.createUser(faker.person.firstName(), faker.person.lastName());
     getUsers();
   };
+
+  React.useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <>
