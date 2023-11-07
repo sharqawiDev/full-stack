@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://frontend.sharqawi.dev",
+  baseURL: "https://backend.sharqawi.dev",
 });
 
 export const getUsers = async () => {
