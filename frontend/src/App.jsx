@@ -12,7 +12,7 @@ function App() {
   };
 
   const createUser = async () => {
-    await API.createUser(faker.person.firstName, faker.person.lastName);
+    await API.createUser(faker.person.firstName(), faker.person.lastName());
     getUsers();
   };
 
