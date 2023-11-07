@@ -11,6 +11,6 @@ services:
       POSTGRES_USER: employees
       POSTGRES_PASSWORD: admin
     volumes:
-      - db:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data
 volumes:
-  db:
+  db-data:
