@@ -13,7 +13,7 @@ const createDB = async () => {
   try {
     await db.authenticate({ logging: false });
     console.log("Connection has been established successfully.");
-    await db.sync({ force: true, logging: false });
+    await db.sync({ logging: false });
     console.log("All models were synchronized successfully.");
   } catch (error) {
     console.error("Unable to connect to the database:", error);
